@@ -1,3 +1,5 @@
+//Renderizar pantallas estáticas
+
 class PageController {
     renderHome (req, res) {
       res.render('home')

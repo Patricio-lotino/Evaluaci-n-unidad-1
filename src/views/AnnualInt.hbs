@@ -1,0 +1,23 @@
+<h1>Cálculo de Interés Bancario Simple</h1>
+  <form action="/" method="post">
+    <div class="mb-3">
+      <label for="Capital" class="form-label">Monto del Capital</label>
+      <input type="number" class="form-control" name="Capital" value="{{Capital}}">
+    </div>
+    <div class="mb-3">
+      <label for="Tasa de Interés" class="form-label">Tasa de Interés Anual</label>
+      <input type="number" class="form-control" name="Interés" value="{{Tasa de Interes}}">
+    </div>
+    <div class="mb-3">
+      <label for="Year" class="form-label">Cantidad de Años</label>
+      <input type="number" class="form-control" name="Años" value="{{Year}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Calcular el Interés Anual</button>
+  </form>
+  
+  {{#if annualInt}}
+  <div class="mt-3 fs-4">
+    <p><span class="fw-bold">Promedio:</span> {{average}}</p>
+  </div>
+  {{/if}}
+</section>
