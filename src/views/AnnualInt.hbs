@@ -1,23 +1,23 @@
-<h1>Cálculo de Interés Bancario Simple</h1>
-  <form action="/" method="post">
+<h1>Cálculo de Interés Anual Bancario Simple</h1>
+  <form action="/" method="POST">
     <div class="mb-3">
-      <label for="Capital" class="form-label">Monto del Capital</label>
-      <input type="number" class="form-control" name="Capital" value="{{Capital}}">
+      <label for="capital" class="form-label">Monto del Capital</label>
+      <input type="number" class="form-control" required="true" name="capital" value="{{capital}}" placeholder="Capital">
     </div>
     <div class="mb-3">
-      <label for="Tasa de Interés" class="form-label">Tasa de Interés Anual</label>
-      <input type="number" class="form-control" name="Interés" value="{{Tasa de Interes}}">
+      <label for="tasa de interes" class="form-label">Tasa de Interés Anual</label>
+      <input type="number" class="form-control" required="true" name="interes" value="{{tasa de interes}}" placeholder="Tasa de Interés">
     </div>
     <div class="mb-3">
-      <label for="Year" class="form-label">Cantidad de Años</label>
-      <input type="number" class="form-control" name="Años" value="{{Year}}">
+      <label for="year" class="form-label">Cantidad de Años</label>
+      <input type="number" class="form-control" required="true" name="años" value="{{year}}" placeholder="Años">
     </div>
-    <button type="submit" class="btn btn-primary">Calcular el Interés Anual</button>
+    <button type="submit" class="btn btn-primary">Calcular Interés Anual</button>
   </form>
   
   {{#if annualInt}}
   <div class="mt-3 fs-4">
-    <p><span class="fw-bold">Promedio:</span> {{average}}</p>
+    <p><span class="fw-bold">Interes Anual Simple:</span> {{annualInt}}</p>
   </div>
   {{/if}}
 </section>
