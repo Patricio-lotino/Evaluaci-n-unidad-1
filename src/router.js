@@ -9,7 +9,7 @@ const pageController = new PageController()
 const annualIntController = new AnnualIntController()
 
 // Routes
-router.get('/',annualIntController.renderAnnualInt)
+router.get('/', annualIntController.renderAnnualInt)
 router.post('/', annualIntController.renderAnnualIntBank)
 
 router.get('*', pageController.renderNotFound)
