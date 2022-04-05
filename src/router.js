@@ -1,16 +1,16 @@
 const express = require('express')
 const PageController = require('./controllers/PageController')
-const AnnualIntController = require('./controllers/AnnualIntController')
+const AnnualInterestController = require('./controllers/AnnualInterestController')
 
 const router = express.Router()
 
 // Controllers
 const pageController = new PageController()
-const annualIntController = new AnnualIntController()
+const annualInterestController = new AnnualInterestController()
 
 // Routes
-router.get('/', annualIntController.renderAnnualInt)
-router.post('/', annualIntController.renderAnnualIntBank)
+router.get('/', annualInterestController.renderAnnualInterest)
+router.post('/', annualInterestController.renderAnnualInterestBank)
 
 router.get('*', pageController.renderNotFound)
 
