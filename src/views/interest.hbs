@@ -15,9 +15,10 @@
     <button type="submit" class="btn btn-primary">Calcular Interés Anual</button>
   </form>
   
-  
+  {{#if totalInterest}}
   <div class="mt-3 fs-4">
-    <p><span class="fw-bold">Interes Anual Simple:</span> {{annualInterest}}</p>
+    <p><span class="fw-bold">Interes Anual Simple:</span> {{totalInterest}}</p>
   </div>
+  {{/if}}
  
 </section>

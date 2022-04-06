@@ -1,17 +1,18 @@
+/* eslint-disable no-unused-vars */
 const express = require('express')
+const InterestController = require('./controllers/InterestController')
 const PageController = require('./controllers/PageController')
-const AnnualInterestController = require('./controllers/AnnualInterestController')
 
 const router = express.Router()
 
 // Controllers
 const pageController = new PageController()
-const annualInterestController = new AnnualInterestController()
+const interestController = new InterestController()
 
 // Routes
-router.get('/', annualInterestController.renderAnnualInterest)
-router.post('/', annualInterestController.renderAnnualInterestBank)
+router.get('/', InterestController.renderInterestForm)
+router.post('/', InterestController.renderInterestResult)
 
-router.get('*', pageController.renderNotFound)
+router.all('*', pageController.renderNotFound)
 
 module.exports = router
